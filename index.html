@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anfisa is a social media marketing specialist. Creative content, strategy, and visual storytelling for modern brands."
+    />
+    <title>Anfisa | Social Media Marketing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blush: "#FFF5F7",
+              petal: "#FCE7ED",
+              accent: "#E8A0B5",
+              rose: "#D98CA5",
+              rosehover: "#C87592",
+              ink: "#3D3035",
+              muted: "#8A7079",
+            },
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', "Georgia", "serif"],
+              sans: ["Outfit", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .rise,
+        .card {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+      .rise {
+        animation: rise 0.9s ease both;
+      }
+      .rise-delay {
+        animation-delay: 0.15s;
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .card {
+        box-shadow: 0 10px 30px rgba(217, 140, 165, 0.16);
+        transition: transform 0.45s ease, box-shadow 0.45s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 44px rgba(200, 117, 146, 0.28);
+      }
+      .hero-glow {
+        background:
+          radial-gradient(ellipse at 15% 20%, rgba(232, 160, 181, 0.55), transparent 55%),
+          radial-gradient(ellipse at 85% 10%, rgba(252, 231, 237, 0.95), transparent 45%),
+          linear-gradient(160deg, #fff5f7 0%, #fce7ed 48%, #f3c5d2 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-blush font-sans text-ink antialiased">
+    <header class="sticky top-0 z-50 border-b border-accent/30 bg-white/95 shadow-sm shadow-rose/10 backdrop-blur-md">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+        <a href="#home" class="font-serif text-2xl tracking-tight text-ink transition hover:text-rose">Anfisa</a>
+        <nav class="hidden items-center gap-8 text-sm tracking-wide text-ink md:flex" aria-label="Primary">
+          <a href="#about" class="transition hover:text-rose">About</a>
+          <a href="#services" class="transition hover:text-rose">Services</a>
+          <a href="#portfolio" class="transition hover:text-rose">Portfolio</a>
+          <a href="#contact" class="transition hover:text-rose">Contact</a>
+        </nav>
+        <a
+          href="#contact"
+          class="hidden rounded-full bg-rose px-5 py-2 text-xs uppercase tracking-[0.18em] text-white shadow-md shadow-rose/30 transition duration-300 hover:bg-rosehover md:inline-block"
+        >
+          Let's work together
+        </a>
+        <button
+          id="menu-toggle"
+          type="button"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-accent text-rose md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <span class="sr-only">Menu</span>
+          <span class="flex flex-col gap-1.5" aria-hidden="true">
+            <span class="block h-px w-4 bg-rose"></span>
+            <span class="block h-px w-4 bg-rose"></span>
+          </span>
+        </button>
+      </div>
+      <nav id="mobile-menu" class="hidden border-t border-accent/30 bg-white px-5 py-4 md:hidden" aria-label="Mobile">
+        <div class="flex flex-col gap-4 text-sm">
+          <a href="#about" class="menu-link">About</a>
+          <a href="#services" class="menu-link">Services</a>
+          <a href="#portfolio" class="menu-link">Portfolio</a>
+          <a href="#contact" class="menu-link">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-glow relative overflow-hidden">
+        <div class="pointer-events-none absolute -left-16 top-10 h-56 w-56 rounded-full bg-white/50 blur-3xl"></div>
+        <div class="pointer-events-none absolute -right-10 bottom-0 h-64 w-64 rounded-full bg-accent/40 blur-3xl"></div>
+        <div class="relative mx-auto max-w-6xl px-5 pb-24 pt-16 sm:px-8 sm:pb-32 sm:pt-24">
+        <p class="rise text-xs uppercase tracking-[0.28em] text-muted">Social Media Marketing Specialist</p>
+        <h1 class="rise rise-delay mt-6 max-w-4xl font-serif text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">
+          Helping Brands Stand Out on Social Media
+        </h1>
+        <p class="mt-8 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+          Creative content, strategic thinking, and visual storytelling for modern brands.
+        </p>
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a
+            href="#portfolio"
+            class="inline-flex items-center justify-center rounded-full bg-rose px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-white shadow-lg shadow-rose/30 transition duration-300 hover:-translate-y-0.5 hover:bg-rosehover"
+          >
+            Explore My Work
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-full bg-rose px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-white shadow-lg shadow-rose/30 transition duration-300 hover:-translate-y-0.5 hover:bg-rosehover"
+          >
+            Let's Work Together
+          </a>
+        </div>
+        </div>
+      </section>
+
+      <section id="about" class="bg-white">
+        <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-4">
+            <p class="text-xs uppercase tracking-[0.28em] text-accent">About Me</p>
+            <h2 class="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Creativity with a marketing mind.</h2>
+          </div>
+          <div class="space-y-6 text-muted lg:col-span-7 lg:col-start-6">
+            <p class="text-lg leading-relaxed text-ink">
+              I am a creative and motivated university student passionate about social media marketing, content creation, and digital communication.
+            </p>
+            <p class="leading-relaxed">
+              I enjoy combining creativity with marketing strategies to help brands build a strong online presence and connect with their audience.
+            </p>
+            <div class="grid gap-4 border-t border-accent/30 pt-8 sm:grid-cols-3">
+              <p class="rounded-2xl bg-petal px-4 py-5 font-serif text-2xl leading-tight text-ink shadow-sm shadow-rose/10">Content</p>
+              <p class="rounded-2xl bg-blush px-4 py-5 font-serif text-2xl leading-tight text-ink shadow-sm shadow-rose/10">Strategy</p>
+              <p class="rounded-2xl bg-accent/40 px-4 py-5 font-serif text-2xl leading-tight text-ink shadow-sm shadow-rose/10">Storytelling</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="bg-petal">
+        <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+          <div class="max-w-xl">
+            <p class="text-xs uppercase tracking-[0.28em] text-accent">Services</p>
+            <h2 class="mt-4 font-serif text-4xl sm:text-5xl">My services.</h2>
+          </div>
+          <div class="mt-14 grid gap-6 sm:grid-cols-2">
+            <article class="card rounded-3xl bg-white p-8 sm:p-10">
+              <p class="text-xs uppercase tracking-[0.2em] text-accent">01</p>
+              <h3 class="mt-4 font-serif text-3xl">Social Media Management</h3>
+              <p class="mt-4 leading-relaxed text-muted">
+                Planning, creating, and managing content for Instagram and other social platforms.
+              </p>
+            </article>
+            <article class="card rounded-3xl bg-white p-8 sm:p-10">
+              <p class="text-xs uppercase tracking-[0.2em] text-accent">02</p>
+              <h3 class="mt-4 font-serif text-3xl">Content Creation</h3>
+              <p class="mt-4 leading-relaxed text-muted">
+                Designing engaging posts, stories, and short-form video content.
+              </p>
+            </article>
+            <article class="card rounded-3xl bg-white p-8 sm:p-10">
+              <p class="text-xs uppercase tracking-[0.2em] text-accent">03</p>
+              <h3 class="mt-4 font-serif text-3xl">Social Media Strategy</h3>
+              <p class="mt-4 leading-relaxed text-muted">
+                Developing content plans and marketing strategies tailored to each brand.
+              </p>
+            </article>
+            <article class="card rounded-3xl bg-white p-8 sm:p-10">
+              <p class="text-xs uppercase tracking-[0.2em] text-accent">04</p>
+              <h3 class="mt-4 font-serif text-3xl">Visual Branding</h3>
+              <p class="mt-4 leading-relaxed text-muted">
+                Creating consistent and aesthetic visual identities for social media.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="bg-white">
+        <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+          <div class="max-w-xl">
+            <p class="text-xs uppercase tracking-[0.28em] text-accent">Portfolio</p>
+            <h2 class="mt-4 font-serif text-4xl sm:text-5xl">Areas of work.</h2>
+            <p class="mt-5 leading-relaxed text-muted">
+              Placeholders for future projects. No client names or finished campaigns are shown here yet.
+            </p>
+          </div>
+          <div class="mt-14 grid gap-8 md:grid-cols-3">
+            <article class="card overflow-hidden rounded-3xl bg-white">
+              <div
+                class="flex aspect-[4/5] items-center justify-center bg-gradient-to-br from-petal to-accent/70"
+                role="img"
+                aria-label="Placeholder for an Instagram post design"
+              >
+                <span class="text-xs uppercase tracking-[0.22em] text-muted">Image placeholder</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-serif text-2xl">Instagram Post Designs</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted">Feed layouts and single-post studies, to be added.</p>
+              </div>
+            </article>
+            <article class="card overflow-hidden rounded-3xl bg-white">
+              <div
+                class="flex aspect-[4/5] items-center justify-center bg-gradient-to-br from-white via-petal to-rose/70"
+                role="img"
+                aria-label="Placeholder for a social media campaign"
+              >
+                <span class="text-xs uppercase tracking-[0.22em] text-muted">Image placeholder</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-serif text-2xl">Social Media Campaigns</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted">Campaign concepts across posts and stories, to be added.</p>
+              </div>
+            </article>
+            <article class="card overflow-hidden rounded-3xl bg-white">
+              <div
+                class="flex aspect-[4/5] items-center justify-center bg-gradient-to-br from-blush via-white to-accent/50"
+                role="img"
+                aria-label="Placeholder for a content plan"
+              >
+                <span class="text-xs uppercase tracking-[0.22em] text-muted">Image placeholder</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-serif text-2xl">Content Planning</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted">Calendars and content structures, to be added.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-petal">
+        <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p class="text-xs uppercase tracking-[0.28em] text-accent">Contact</p>
+            <h2 class="mt-4 font-serif text-4xl sm:text-5xl">Let's work together.</h2>
+            <p class="mt-6 max-w-md leading-relaxed text-muted">
+              Tell me about the brand and the kind of social presence you want. Content, strategy, or a visual direction for the feed.
+            </p>
+          </div>
+          <form id="contact-form" class="card space-y-5 rounded-3xl bg-white p-6 sm:p-8" novalidate>
+            <div>
+              <label for="name" class="text-xs uppercase tracking-[0.18em] text-muted">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                autocomplete="name"
+                class="mt-2 w-full rounded-2xl border border-accent/40 bg-blush px-4 py-3 text-ink outline-none transition focus:border-rose"
+              />
+            </div>
+            <div>
+              <label for="email" class="text-xs uppercase tracking-[0.18em] text-muted">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                class="mt-2 w-full rounded-2xl border border-accent/40 bg-blush px-4 py-3 text-ink outline-none transition focus:border-rose"
+              />
+            </div>
+            <div>
+              <label for="message" class="text-xs uppercase tracking-[0.18em] text-muted">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="mt-2 w-full resize-y rounded-2xl border border-accent/40 bg-blush px-4 py-3 text-ink outline-none transition focus:border-rose"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full rounded-full bg-rose px-6 py-3.5 text-xs uppercase tracking-[0.18em] text-white shadow-md shadow-rose/30 transition duration-300 hover:-translate-y-0.5 hover:bg-rosehover sm:w-auto"
+            >
+              Send message
+            </button>
+            <p id="form-note" class="hidden text-sm text-muted" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-accent via-rose to-accent text-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <p class="font-serif text-2xl">Anfisa</p>
+        <p class="text-sm text-white/85">Social media marketing.</p>
+        <a href="#home" class="text-xs uppercase tracking-[0.18em] text-white transition hover:text-blush">Back to top</a>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+
+      toggle.addEventListener("click", () => {
+        const open = menu.classList.toggle("hidden") === false;
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Open menu");
+        });
+      });
+
+      document.getElementById("contact-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        const name = data.get("name");
+        document.getElementById("form-note").textContent =
+          "Thank you, " + name + ". Your message is ready.";
+        document.getElementById("form-note").classList.remove("hidden");
+        event.currentTarget.reset();
+      });
+    </script>
+  </body>
+</html>
