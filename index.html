@@ -275,7 +275,9 @@
               Tell me about the brand and the kind of social presence you want. Content, strategy, or a visual direction for the feed.
             </p>
           </div>
-          <form id="contact-form" class="card space-y-5 rounded-3xl bg-white p-6 sm:p-8" novalidate>
+          <form id="contact-form" action="https://formspree.io/f/myeerjok"
+          
+           method="POST" class="card space-y-5 rounded-3xl bg-white p-6 sm:p-8" novalidate>
             <div>
               <label for="name" class="text-xs uppercase tracking-[0.18em] text-muted">Name</label>
               <input
@@ -346,15 +348,7 @@
         });
       });
 
-      document.getElementById("contact-form").addEventListener("submit", (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        const name = data.get("name");
-        document.getElementById("form-note").textContent =
-          "Thank you, " + name + ". Your message is ready.";
-        document.getElementById("form-note").classList.remove("hidden");
-        event.currentTarget.reset();
-      });
+      
     </script>
   </body>
 </html>
